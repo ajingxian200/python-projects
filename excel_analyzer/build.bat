@@ -1,10 +1,10 @@
 @echo off
 echo ========================================
-echo   Excel 对比分析工具 - 打包脚本
+echo   CSV 转 Excel 工具 - 打包脚本
 echo ========================================
 echo.
 
-echo [1/2] 安装依赖...
+echo [1/3] 安装依赖...
 pip install -r requirements.txt
 if %errorlevel% neq 0 (
     echo 依赖安装失败！
@@ -13,8 +13,17 @@ if %errorlevel% neq 0 (
 )
 
 echo.
-echo [2/2] 打包为 exe...
-pyinstaller --onefile --windowed --name "Excel分析工具" --clean app.py
+echo [2/3] 安装 PyInstaller...
+pip install pyinstaller
+if %errorlevel% neq 0 (
+    echo PyInstaller 安装失败！
+    pause
+    exit /b 1
+)
+
+echo.
+echo [3/3] 打包为 exe...
+pyinstaller --onefile --windowed --name "CSV转Excel工具" --clean app.py
 if %errorlevel% neq 0 (
     echo 打包失败！
     pause
