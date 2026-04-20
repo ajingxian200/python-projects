@@ -1,1 +1,3 @@
 venv
+excel_analyzer/build/
+excel_analyzer/dist/

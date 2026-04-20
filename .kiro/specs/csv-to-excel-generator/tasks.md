@@ -88,7 +88,7 @@
     - _需求: 4.2, 4.3, 4.4, 7.1_
 
 - [ ] 5. 添加 hypothesis 依赖并整合测试
-  - [~] 5.1 在 `excel_analyzer/requirements.txt` 中添加 `hypothesis` 和 `pytest` 依赖
+  - [ ] 5.1 在 `excel_analyzer/requirements.txt` 中添加 `hypothesis` 和 `pytest` 依赖
     - _需求: 无（测试基础设施）_
   - [ ]* 5.2 创建 `excel_analyzer/tests/__init__.py` 和测试文件 `excel_analyzer/tests/test_csv_to_excel.py`
     - 将任务 1.3-1.6 的属性测试和任务 4.3 的单元测试整合到此文件中
